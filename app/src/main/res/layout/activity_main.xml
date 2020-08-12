@@ -1,18 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FrameLayoutExerciseActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@+id/toolbarId"
+        layout="@layout/toolbar_ui"
+        />
+    <FrameLayout
+        android:id="@+id/layer_oneId"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@color/colorPrimary"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layer_two"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        >
+
+        <TextView
+            android:id="@+id/welcomeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_msg"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/welcome_text_size"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/statisticsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/statistics"
+            android:textColor="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:textSize="@dimen/statistics_text_size"
+            android:layout_marginTop="34dp"
+            />
+        <TextView
+            android:id="@+id/calloutId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/call_action"
+            android:textColor="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:textSize="@dimen/statistics_text_size"
+            android:layout_marginTop="54dp"
+            />
+
+
+
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/center_imageId"
+        android:layout_width="170dp"
+        android:layout_height="370dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/cd_centerImage"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-100dp"
+        android:src="@drawable/newphone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/base"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:id="@+id/sign_inId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="64dp"
+            android:textSize="@dimen/register_text_size" />
+
+        <TextView
+            android:id="@+id/sign_outId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="@string/sign_up"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="64dp"
+            android:textSize="@dimen/register_text_size" />
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

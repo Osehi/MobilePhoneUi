@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WeekFourTask</string>
+    <string name="my_image_desc">custom drawable</string>
+    <string name="back_navigation">Back Navigation</string>
+    <string name="welcome_msg">Welcome to app</string>
+    <string name="statistics">3,666 business signed up last week.</string>
+    <string name="call_action">Try Acme free for 30 days.</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="cd_centerImage">Item for Sale</string>
 </resources>
